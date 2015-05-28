@@ -17,6 +17,7 @@ if [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
 	done
 	git reset HEAD "${FILE[0]}" # Remove file from stage
 	mv "${FILE[0]}" index.html
+	git add index.html
 	git commit -am "Get content from master branch"
 
 	git checkout master
